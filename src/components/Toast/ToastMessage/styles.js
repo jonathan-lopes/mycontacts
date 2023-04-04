@@ -20,6 +20,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   ${({ type }) => containerVariants[type] || containerVariants.default}
 
