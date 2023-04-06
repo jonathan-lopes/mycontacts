@@ -29,6 +29,13 @@ class HttpClient {
     });
   }
 
+  delete(path, options) {
+    return this.makeRequest(path, {
+      method: 'DELETE',
+      headers: options?.headers,
+    });
+  }
+
   async makeRequest(path, options) {
     await delay(500);
 
@@ -54,7 +61,7 @@ class HttpClient {
 
     let body = null;
 
-    if (contentType.includes('application/json')) {
+    if (contentType?.includes('application/json')) {
       body = await response.json();
     }
 
