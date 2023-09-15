@@ -1,8 +1,8 @@
-import HttpClient from './utils/HttpClient';
+import HttpClient from './helpers/HttpClient';
 
 class CategoriesService {
   constructor() {
-    this.httpClient = new HttpClient('http://localhost:3333');
+    this.httpClient = new HttpClient(import.meta.env.VITE_API);
   }
 
   listCategories() {
