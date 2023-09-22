@@ -22,18 +22,18 @@
     "commit": "gitmoji -c"
   },
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "^5.3.4",
-    "styled-components": "^5.3.0"
+    "styled-components": "^6.0.8"
   },
   "devDependencies": {
-    "@types/react": "^17.0.2",
+    "@types/react": "^18.2.22",
     "@types/react-dom": "^17.0.2",
     "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react-swc": "^3.3.2",
-    "eslint": "^8.48.0",
+    "eslint": "^8.49.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.1",
@@ -43,7 +43,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "gitmoji-cli": "^8.5.0",
     "prettier": "^3.0.3",
-    "vite": "^4.4.5"
+    "vite": "^4.4.9"
   },
   "gitmoji": {
     "scopePrompt": true,
