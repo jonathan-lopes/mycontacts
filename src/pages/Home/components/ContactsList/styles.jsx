@@ -18,8 +18,8 @@ export const ListHeader = styled.header`
     }
 
     img {
-      transform: ${({ orderBy }) =>
-        orderBy === 'asc' ? 'rotate(180deg)' : 'rotate(0deg)'};
+      transform: ${({ $orderBy }) =>
+        $orderBy === 'asc' ? 'rotate(180deg)' : 'rotate(0deg)'};
       transition: transform 0.4s ease-in;
     }
   }

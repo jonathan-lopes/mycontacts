@@ -14,7 +14,7 @@ export default function Button({
     <StyledButton
       type={type}
       disabled={disabled || isLoading}
-      danger={danger}
+      $danger={danger}
       onClick={onClick}
     >
       {!isLoading && children}

@@ -33,7 +33,7 @@ const ContactForm = forwardRef(({ buttonLabel, onSubmit }, ref) => {
           placeholder="Nome *"
           value={name}
           onChange={handleNameChange}
-          error={getErrorMessageByFieldName('name')}
+          $error={getErrorMessageByFieldName('name')}
           disabled={isSubmitting}
         />
       </FormGroup>
@@ -44,7 +44,7 @@ const ContactForm = forwardRef(({ buttonLabel, onSubmit }, ref) => {
           placeholder="E-mail"
           value={email}
           onChange={handleEmailChange}
-          error={getErrorMessageByFieldName('email')}
+          $error={getErrorMessageByFieldName('email')}
           disabled={isSubmitting}
         />
       </FormGroup>

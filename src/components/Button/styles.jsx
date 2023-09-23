@@ -28,8 +28,8 @@ export const StyledButton = styled.button`
     cursor: default;
   }
 
-  ${({ theme, danger }) =>
-    danger &&
+  ${({ theme, $danger }) =>
+    $danger &&
     css`
       background: ${theme.colors.danger.main};
 

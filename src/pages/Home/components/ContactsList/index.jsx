@@ -14,7 +14,7 @@ export default function ContactsList({
   return (
     <>
       {filteredContacts.length > 0 && (
-        <ListHeader orderBy={orderBy}>
+        <ListHeader $orderBy={orderBy}>
           <button type="button" onClick={onToggleOrderBy}>
             <span>Nome</span>
             <img src={arrow} alt="Arrow" />

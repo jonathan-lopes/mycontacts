@@ -21,10 +21,10 @@ const ToastMessage = memo(
     return (
       <Container
         tabIndex={0}
-        type={message.type}
+        $type={message.type}
         onClick={handleRemoveToast}
         role="button"
-        isLeaving={isLeaving}
+        $isLeaving={isLeaving}
         ref={animatedRef}
       >
         {message.type === 'danger' && <img src={xCircleIcon} alt="X" />}

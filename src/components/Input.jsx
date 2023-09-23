@@ -23,8 +23,8 @@ export default styled.input`
     border-color: ${({ theme }) => theme.colors.gray[200]};
   }
 
-  ${({ theme, error }) =>
-    error &&
+  ${({ theme, $error }) =>
+    $error &&
     css`
       color: ${theme.colors.danger.main};
       border-color: ${theme.colors.danger.main} !important;

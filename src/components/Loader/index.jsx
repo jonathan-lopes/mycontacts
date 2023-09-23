@@ -13,7 +13,7 @@ export default function Loader({ isLoading }) {
 
   return (
     <ReactPortal containerId="loader-root">
-      <Overlay isLeaving={!isLoading} ref={animatedElementRef}>
+      <Overlay $isLeaving={!isLoading} ref={animatedElementRef}>
         <Spinner size={90} />
       </Overlay>
     </ReactPortal>

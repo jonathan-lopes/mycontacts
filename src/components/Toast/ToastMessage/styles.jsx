@@ -47,13 +47,13 @@ export const Container = styled.div`
   cursor: pointer;
   animation: ${messageIn} 0.3s;
 
-  ${({ isLeaving }) =>
-    isLeaving &&
+  ${({ $isLeaving }) =>
+    $isLeaving &&
     css`
-      animation: ${messageOut} 0.2s;
+      animation: ${messageOut} 0.2s forwards;
     `}
 
-  ${({ type }) => containerVariants[type] || containerVariants.default};
+  ${({ $type }) => containerVariants[$type] || containerVariants.default};
 
   & + & {
     margin-top: 12px;
