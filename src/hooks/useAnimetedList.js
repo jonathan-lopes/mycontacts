@@ -26,7 +26,7 @@ export default function useAnimetedList(initialValue = []) {
       const alreadyHasListener = animationEndListeners.current.has(itemId);
 
       const animatedElement = animatedRef?.current;
-      
+
       if (animatedElement && !alreadyHasListener) {
         const onAnimationEnd = () => handleAnimationEnd(itemId);
         const removeListener = () => {
