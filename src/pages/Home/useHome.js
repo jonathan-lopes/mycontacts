@@ -1,4 +1,10 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import {
+  useCallback,
+  useDeferredValue,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 import toast from '../../helpers/toast';
 import ContactsService from '../../services/ContactsService';
 
@@ -12,12 +18,14 @@ export default function useHome() {
   const [contactBeingDelete, setContactBenigDelete] = useState(null);
   const [isLoadingDelete, setIsLoadingDelete] = useState(false);
 
+  const deferredSearchTerm = useDeferredValue(searchTerm);
+
   const filteredContacts = useMemo(
     () =>
       contacts.filter((contact) =>
-        contact.name.toLowerCase().includes(searchTerm.toLowerCase()),
+        contact.name.toLowerCase().includes(deferredSearchTerm.toLowerCase()),
       ),
-    [contacts, searchTerm],
+    [contacts, deferredSearchTerm],
   );
 
   const loadContacts = useCallback(async () => {
@@ -38,9 +46,9 @@ export default function useHome() {
     loadContacts();
   }, [loadContacts]);
 
-  function handleToggleOrderBy() {
+  const handleToggleOrderBy = useCallback(() => {
     setOrderBy((prevState) => (prevState === 'asc' ? 'desc' : 'asc'));
-  }
+  }, []);
 
   function handleChangeSearchTerm(event) {
     setSearchTerm(event.target.value);
@@ -50,10 +58,10 @@ export default function useHome() {
     loadContacts();
   }
 
-  function handleDeleteContact(contact) {
+  const handleDeleteContact = useCallback((contact) => {
     setContactBenigDelete(contact);
     setIsDeleteModalVisible(true);
-  }
+  }, []);
 
   function handleCloseDeleteModal() {
     setIsDeleteModalVisible(false);
