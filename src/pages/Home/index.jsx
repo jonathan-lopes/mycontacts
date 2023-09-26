@@ -55,13 +55,8 @@ export default function Home() {
           <ContactsList
             orderBy={orderBy}
             filteredContacts={filteredContacts}
-            contactBeingDelete={contactBeingDelete}
-            isLoadingDelete={isLoadingDelete}
-            isDeleteModalVisible={isDeleteModalVisible}
             onToggleOrderBy={handleToggleOrderBy}
             onDeleteContact={handleDeleteContact}
-            onCloseDeleteModal={handleCloseDeleteModal}
-            onConfirmDeleteContact={handleConfirmDeleteContact}
           />
 
           <Modal
