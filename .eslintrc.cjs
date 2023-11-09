@@ -14,6 +14,7 @@ module.exports = {
   settings: { react: { version: '17.0' } },
   plugins: ['react', 'react-refresh'],
   rules: {
+    'react/require-default-props': 'off',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
